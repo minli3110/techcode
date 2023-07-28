@@ -1,0 +1,338 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    margin: 10px;
+    margin-left: 50px;
+}
+
+.container {
+    padding: 0 250px;
+    padding-top: 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    color: #007bff;
+    margin: 0;
+}
+
+.add-user-btn {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.add-user-btn:hover {
+    background-color: #218838;
+}
+
+.add-post-btn {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.add-post-btn:hover {
+    background-color: #218838;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.editBtn, .deleteBtn {
+    padding: 5px 10px;
+    margin-right: 5px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.editBtn {
+    background-color: #007bff;
+}
+
+.editBtn:hover {
+    background-color: #0056b3;
+}
+
+.deleteBtn {
+    background-color: #ff0000;
+}
+
+.deleteBtn:hover {
+    background-color: #c0392b;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #009FBD;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.dashboard-btn {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.dashboard-btn:hover {
+    background-color: #555;
+}
+
+.logout {
+    position: absolute;
+    bottom: 10px;
+    margin-left: 37px;
+}
+
+.logout-btn {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    padding: 10px 40px;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background-color: #e53935;
+}
+
+.content {
+    margin-left: 200px;
+    max-width: 1000px; /* Adjust the maximum width as needed */
+    padding: 20px; /* Adjust the padding as needed */
+    text-align: center;
+    font-size: 24px; /* Adjust the font size as needed */
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.cancel-btn {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #ff0000;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.cancel-btn:hover {
+    background-color: #c0392b;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.sidebar-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.dashboard-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.dashboard-menu li {
+    margin-bottom: 10px;
+}
+
+.dashboard-btn {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+}
+
+.dashboard-btn:hover {
+    background-color: #555;
+}
+
+.sub-menu {
+    list-style: none;
+    padding-left: 20px;
+    display: none;
+}
+
+.dashboard-menu li:hover .sub-menu {
+    display: block;
+}
+
+.sub-btn {
+    background-color: #666;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+}
+
+.sub-btn:hover {
+    background-color: #777;
+}
+
+form.add-post-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form.add-post-form label {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* Add this style for the fixed max width of the textarea */
+form.add-post-form textarea {
+    max-width: 100%; /* Set the maximum width for the textarea */
+    min-width: 100%; /* Set the minimum width for the textarea */
+}
+
+form.add-post-form input[type="text"],
+form.add-post-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+form.add-post-form button[type="submit"] {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+form.add-post-form button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+.post-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Clear the float after every 2 cards to start a new row */
+.post-card:nth-child(2n+1) {
+    clear: both;
+}
+
+.post-card h2 {
+    color: #007bff;
+    margin-top: 0;
+}
+
+.post-card p {
+    margin-top: 10px 0;
+    line-height: 1.6;
+}
+
+.post-card a:hover {
+    background-color: #0056b3;
+}
+
+/* Add styles for the edit and delete buttons */
+.edit-btn,
+.delete-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+.delete-btn {
+    background-color: #ff0000;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+.edit-btn {
+    background-color: #007bff;
+}
+
+.edit-btn:hover {
+    background-color: #0056b3;
+}
