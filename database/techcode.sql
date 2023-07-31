@@ -110,3 +110,51 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+-- Table structure for table `Accommodation`
+--
+
+CREATE TABLE `Accommodation` (
+  `acc_id` int(11) NOT NULL,
+  `accname` varchar(100) NOT NULL,
+  `address` varchar(200) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `phone` varchar(50) DEFAULT NULL,
+  `mrt` varchar(50) DEFAULT NULL,
+  `accpix` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `Accommodation`
+--
+
+INSERT INTO `Accommodation` (`acc_id`, `accname`, `address`, `email`, `phone`, `mrt`, `accpix`) VALUES
+(1, 'Novena Hall', '78 Gilstead Road, Singapore 309116', 'admin@novenahall.com.sg', '6352-0580', 'Novena/NS20', 'uploads/Novena Hall.png'),
+(2, 'PSB Academy Student Apartments @ Bugis', 'PSB Academy Student Hostel @ Bugis 33 Liang Seah Street #03-00, Singapore 189054', 'caixiaojun05@gmail.com', '9109-2796', 'Bugis/EW12/DT14', 'uploads/PSB Academy Student Apartments @ Bugis.png'),
+(3, 'Dwell Student Living', '1A Short Street, Singapore 188210', 'adeline.loh@dwellstudent.com.sg', '6251-8588', 'Rochor/DT13', 'uploads/Dwell Student Living.png');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Cats`
+--
+
+CREATE TABLE `Cats` (
+  `cat_id` int(11) NOT NULL,
+  `catname` varchar(50) NOT NULL,
+  `catdescription` varchar(500) NOT NULL,
+  `catpix` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `Cats`
+--
+
+INSERT INTO `Cats` (`cat_id`, `catname`, `catdescription`, `catpix`) VALUES
+(21, 'Foodcourts', 'The convenience, affordability, and diverse meal options at Encik Tan and Gourmet Paradise @ The Dining Edition, make them favorite gathering spots for students.', NULL),
+(31, 'Cafes', 'La Coffee, dal.komm COFFEE, and Starbucks Coffee offer a range of energizing brews and treats, perfect for late-night study sessions or last-minute revisions.', 'uploads/Cafes.png'),
+(32, 'Western', 'Saizeriya and Han\'s supply students with a tantalizing variety of affordable dishes from authentic Italian cuisine to diverse and Asian-inspired comfort food.', 'uploads/Western.png'),
+(33, 'Bakery', 'Indulge your sweet tooth at Victoria Bakery & Cafe in Marina Square, where an enticing selection of freshly baked treats and confections awaits.', 'uploads/Bakery.png'),
+(34, 'Convenience Stores', '7-Eleven is your one-stop shop for student essentials like snacks, beverages, personal care products and other necessities.', 'uploads/Convenience Stores.png');
+
