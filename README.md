@@ -184,7 +184,7 @@ Follow the steps below to install XAMPP on your computer:
 ### To use the dashboard for managing posts, follow these steps:
 
 1. **Access the Dashboard:** <a id="access-the-dashboard"></a>
-   - Open your web browser and navigate to the URL **"[admin_login.html](admin_login.html)"** file (Example: `https://localhost/UON_Project/admin_login.html`).
+   - Open your web browser and navigate to the URL **"[admin_login.html](admin_login.html)"** file (Example: `https://localhost/techocde/admin_login.html`).
    - You will be redirected to the login page. Use the username and password (admin/adminpass123) to log in to the dashboard.
     
     
