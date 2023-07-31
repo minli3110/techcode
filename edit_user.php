@@ -26,6 +26,20 @@
                         <li><button class="sub-btn" onclick="window.location.href='add_post.php'">Add Post</button></li>
                     </ul>
                 </li>
+                <li>
+                        <button class="dashboard-btn">Food Post</button>
+                        <ul class="sub-menu">
+                            <li><button class="sub-btn" onclick="window.location.href='w_foodcats.php'">Food Category</button></li>
+                            <li><button class="sub-btn" onclick="window.location.href='addcat.php'">Add Category</button></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button class="dashboard-btn">Accommodate Post</button>
+                        <ul class="sub-menu">
+                            <li><button class="sub-btn" onclick="window.location.href='w_accommodation.php'">Accommodation</button></li>
+                            <li><button class="sub-btn" onclick="window.location.href='addacc.php'">Add Accommodate</button></li>
+                        </ul>
+                    </li>
             </ul>
         </div>
 
