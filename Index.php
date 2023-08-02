@@ -81,9 +81,7 @@ $content = '<!DOCTYPE html>
 
 					<h2 style="font-size:4vw; font-weight: 800; margin-top:50px;">Testimonials</h2>
 					<div class="testimonial_video">
-						<video controls>
-							<source src="video/testimonial.mp4" type="video/mp4">
-						</video>
+    					<iframe src="https://drive.google.com/file/d/1VvuO6xRZw1QieXui4y1slU7i1_wcGPG9/preview" width="640" height="480"></iframe>
 					</div>
 					<div class="wrapper">
 						<div class="carousel">
@@ -130,8 +128,7 @@ $content = '<!DOCTYPE html>
 							<img src="images\SCS.png" alt="SCS_img">
 							<img src="images\CPA.png" alt="CPA_img">
 							<img src="images\iosh.png" alt="iosh_img">
-							<img src="images\Engineer_aus.png" alt="Engi_aus_img">
-						</div>
+							<img src="images\Engineer_aus.png" alt="Engi_aus_img" style: height="auto;">						</div>
 					</section>
 
 					<footer class="footer">
@@ -156,6 +153,7 @@ $content = '<!DOCTYPE html>
         <script src="script.js"></script>
 	</body>
 </html>
+
 
 ';
 ?>
