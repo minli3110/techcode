@@ -4,7 +4,7 @@
         include 'config/db_connection.php';
 
         // Connect to the database server
-        $dbname = "techcode"; // Change this according to your database name
+        $dbname = "id21102709_uontechcode"; // Change this according to your database name
         $conn = connectToDatabase($dbname);
 
         // Get the post ID from the URL parameter
@@ -31,7 +31,7 @@
         include 'config/db_connection.php';
 
         // Connect to the database server
-        $dbname = "techcode"; // Change this according to your database name
+        $dbname = "id21102709_uontechcode"; // Change this according to your database name
         $conn = connectToDatabase($dbname);
 
         // Process the form data and update the post in the database

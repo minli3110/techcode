@@ -60,7 +60,7 @@
                 include 'config/db_connection.php';
 
                 // Connect to database server
-                $dbname = "techcode";  ########## CHANGE THIS ACCORDINGLY ##########
+                $dbname = "id21102709_uontechcode";  ########## CHANGE THIS ACCORDINGLY ##########
                 $conn = connectToDatabase($dbname);
 
                 // Check if the "users" table exists, and create it if not

@@ -4,7 +4,7 @@
         include 'config/db_connection.php';
 
         // Connect to database server
-        $dbname = "techcode"; // Change this according to your database name
+        $dbname = "id21102709_uontechcode"; // Change this according to your database name
         $conn = connectToDatabase($dbname);
 
         // Process the form data and add the post to the database

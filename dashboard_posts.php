@@ -61,7 +61,7 @@
                     include 'config/db_connection.php';
 
                     // Connect to database server
-                    $dbname = "techcode";  // Change this according to your database name
+                    $dbname = "id21102709_uontechcode";  // Change this according to your database name
                     $conn = connectToDatabase($dbname);
 
                     // Check if the "posts" table exists, and create it if not
@@ -78,7 +78,7 @@
                             $title = $row['title'];
                 
                             // Read the corresponding PHP file from the "post/" directory
-                            $filename = "posts/" . $title . ".php";
+                            $filename = $title .".php";
                             if (file_exists($filename)) {
                                 $content = file_get_contents($filename);
                             } else {

@@ -55,7 +55,7 @@
                 include 'config/db_connection.php';
 
                 // Connect to database server
-                $dbname = "techcode";
+                $dbname = "id21102709_uontechcode";
                 $conn = connectToDatabase($dbname);
                 
                 if (isset($_GET['id'])) {
