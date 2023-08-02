@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Aug 01, 2023 at 10:31 AM
+-- Generation Time: Aug 02, 2023 at 08:41 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -30,11 +30,11 @@ SET time_zone = "+00:00";
 CREATE TABLE `Accommodation` (
   `acc_id` int(11) NOT NULL,
   `accname` varchar(100) NOT NULL,
-  `address` varchar(200) DEFAULT NULL,
-  `email` varchar(50) DEFAULT NULL,
-  `phone` varchar(50) DEFAULT NULL,
-  `mrt` varchar(50) DEFAULT NULL,
-  `accpix` varchar(50) DEFAULT NULL
+  `address` varchar(500) DEFAULT NULL,
+  `email` varchar(500) DEFAULT NULL,
+  `phone` varchar(500) DEFAULT NULL,
+  `mrt` varchar(500) DEFAULT NULL,
+  `accpix` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -42,10 +42,13 @@ CREATE TABLE `Accommodation` (
 --
 
 INSERT INTO `Accommodation` (`acc_id`, `accname`, `address`, `email`, `phone`, `mrt`, `accpix`) VALUES
-(2, 'PSB Academy Student Apartments @ Bugis', 'PSB Academy Student Hostel @ Bugis 33 Liang Seah Street #03-00, Singapore 189054', 'caixiaojun05@gmail.com', '8853-2796', 'Bugis/EW12/DT14', 'uploads/PSB Academy Student Apartments @ Bugis.png'),
-(3, 'Dwell Student Living', '1A Short Street, Singapore 188210', 'adeline.loh@dwellstudent.com.sg', '6251-8588', 'Rochor/DT13', 'uploads/Dwell Student Living.png'),
-(8, 'yoHA Hostel', '55 Nim Dr, S990066', 'boohoohoo@mac.com', '8844-5432', 'Rochor/DT13', 'uploads/yoHA Hostel.png'),
-(9, 'ShangriLa', '456 Orange Groove Road, SG 675332', 'shang@singnet.com.sg', '5633-9011', 'Orchard/NSL', 'uploads/ShangriLa.png');
+(10, 'PSB Academy Student Apartments @ Bugis', 'PSB Academy Student Hostel @ Bugis 33 Liang Seah Street #03-00, Singapore 189054 ', 'Email: caixiaojun05@gmail.com', 'Tel: +65 9109 2796', 'Bugis/EW12/DT14', 'uploads/PSB Academy Student Apartments @ Bugis.png'),
+(11, 'Novena Hall Pte Ltd ', '78 Gilstead Road, Singapore 309116', 'Email: admin@novenahall.com.sg', 'Tel: 6352 0580', 'Novena/NS20', 'uploads/Novena Hall Pte Ltd .png'),
+(12, 'Dwell Student Living', '1A Short Street, Singapore 188210', 'Email: adeline.loh@dwellstudent.com.sg', 'Tel: 6251 8588', 'Rochor/DT13', 'uploads/Dwell Student Living.png'),
+(14, 'yo:HA Hostel', 'Henderson: 98 Henderson Road, Singapore 159543 Evans: 26 Evans Road, Singapore 259367 Pearl’s Hill Terrace: 201 Pearl’s Hill Terrace, Singapore 168977 Main Office: EM Real Estate Pte Ltd (Henderson)', 'Email: info@yoha.com.sg', 'Evans: 6732 0074 Henderson: 6275 8880 Pearl’s Hill Terrace: 6331 7401', 'Henderson: Redhill/EW18 Evans: Farrer Road/CC20 Pearl’s Hill Terrace: Chinatown/NE4/DT19', 'uploads/yo:HA Hostel.png'),
+(15, '31 Homestay', 'Sky Green: 568 Macpherson Road, Singapore 368237 Jalan Bunga Rampai: 31 Jln Bunga Rampai, Singapore 538413', 'Email: welcome@31homestay.com', '', 'Sky Green: Tai Seng/CC11 Jalan Bunga Rampai: Bartley/CC12', 'uploads/31 Homestay.png'),
+(16, 'EVO House Services', '31 Harrison Road #05-03, Singapore ', 'Email: caixiaojun05@gmail.com', 'Tel: +65 6381 6108 Fax: +65 6384 6108', 'Tai Seng/CC11', 'uploads/EVO House Services.png'),
+(17, 'Coliwoo', 'Coliwoo Orchard: 2 Mount Elizabeth Link, Singapore 227973  Coliwoo 450SR: 450 & 452 Serangoon Road, Singapore 218139  Coliwoo Lavender: 612 Serangoon Road, Singapore 218217  Coliwoo 75BR:  75 Beach Road, Singapore 189689  Coliwoo Balestier 320: 320 Balestier Road, Singapore 329924  Coliwoo Keppel: 1557 Keppel Road, Singapore 089066  Coliwoo 1A Lutheran: 1A Lutheran Road, Singapore 267745  Coliwoo Boon Lay: 31 Boon Lay Drive, Singapore 649934 ', 'Email: enquiry@coliwoo.com', 'Tel: +65 9790 8585', 'Coliwoo Orchard: Orchard/NS22/TE14, Somerset/NS23  Coliwoo 450SR: Farrer Park/NE8, Bendemeer/DT23, Boon Keng/NE9 Coliwoo Lavender:  Farrer Park/NE8, Bendemeer/DT23, Boon Keng/NE9, Lavender/EW11 Coliwoo 75BR: Bugis/EW12/DT14, City Hall/NS25/EW13 Coliwoo Balestier 320: Novena/NS20 Coliwoo Keppel: Outram Park/, Tanjong Pagar/ Coliwoo 1A Lutheran:  Farrer Road/CC20, Botanic Garden/CC19/DT9, Tan Kah Kee/DT8 Coliwoo Boon Lay:  Boon Lay/EW27', 'uploads/Coliwoo.png');
 
 -- --------------------------------------------------------
 
@@ -65,9 +68,12 @@ CREATE TABLE `Cats` (
 --
 
 INSERT INTO `Cats` (`cat_id`, `catname`, `catdescription`, `catpix`) VALUES
-(31, 'Cafes', 'La Coffee, dal.komm COFFEE, and Starbucks Coffee offer a range of energizing brews and treats, perfect for late-night study sessions or last-minute revisions.', 'uploads/Cafes.png'),
-(32, 'Western', 'Saizeriya and Han\'s supply students with a tantalizing variety of affordable dishes from authentic Greek cuisine to diverse and Asian-inspired comfort food.', 'uploads/Western.png'),
-(33, 'Bakery', 'HA! Indulge your sweet tooth at SG Bakery & Cafe in Marina Square, where an enticing selection of freshly baked treats and confections awaits.', 'uploads/Bakery.png');
+(50, 'Convenience Store ', '7-Eleven is your one-stop shop for student essentials like snacks, beverages, personal care products and other necessities.', 'uploads/Convenience Store .png'),
+(51, 'Fast Food', 'Pizza Hut\'s delicious meals, McDonald\'s timeless favorites, and Burger King\'s flame-grilled delights offer students an enticing variety of affordable options designed to satisfy their taste buds.', 'uploads/Fast Food.png'),
+(52, 'Coffee', 'La Coffee, dal.komm COFFEE, and Starbucks Coffee offer a range of energizing brews and treats, perfect  for late-night study sessions or last-minute revisions.', 'uploads/Coffee.png'),
+(53, 'Western', 'Saizeriya and Han\'s supply students with a tantalizing variety of affordable dishes from authentic Italian cuisine to diverse and Asian-inspired comfort food.', 'uploads/Western.png'),
+(54, 'Bakery', 'Indulge your sweet tooth at Victoria Bakery & Cafe in Marina Square, where an enticing selection of freshly baked treats and confections awaits.', 'uploads/Bakery.png'),
+(56, 'Foodcourt', 'The convenience, affordability, and diverse meal options at Encik Tan and Gourmet Paradise @ The Dining Edition, make them favourite gathering spots for students.', 'uploads/Foodcourt.png');
 
 -- --------------------------------------------------------
 
@@ -158,13 +164,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `Accommodation`
 --
 ALTER TABLE `Accommodation`
-  MODIFY `acc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `acc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `Cats`
 --
 ALTER TABLE `Cats`
-  MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+  MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 
 --
 -- AUTO_INCREMENT for table `posts`
