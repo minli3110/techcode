@@ -1,10 +1,10 @@
-<?php
-$title = 'Food';
-$content = '<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
 		<meta charset="UTF-8">
     <title>Food</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
     <link rel="stylesheet" href="Page.css"> <!-- Linking the external CSS file -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
@@ -45,61 +45,50 @@ $content = '<!DOCTYPE html>
 
           <h1 style="font-size: 5vw; font-weight: 800; color: #2D3138;"><b>Food in Marina Square</b></h1>
 
-          <section>
+          <?php
+                $host = 'localhost';
+                $db = 'techcode';
+                $user = 'root';
+                $pass = '';
+                $charset = 'utf8mb4';
+
+                $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+
+                try {
+                    $pdo = new PDO($dsn, $user, $pass);
+                    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+                } catch(PDOException $e) {
+                    echo "<h1 class='text-danger'>No Database Found</h1>";
+                    //throw new PDOException($e -> getMessage());
+                }
+
+                require_once '../db/conn.php';
+                $crud = new crud($pdo);
+                $results = $crud->getCats();
+            ?>
+<br></br>
+
+    <br></br>
+
+    <?php while($r = $results->fetch(PDO::FETCH_ASSOC)) {?>
+    
+        <section>
             <div class="container">
-              <img src="images/imConvStore.png" alt="Convenience Store">
-              <button class="button">Explore</button>
+            <img src="<?php echo empty($r['catpix']) ? "uploads/genfc.png" : $r['catpix'] ;?>" class="img-fluid rounded-start" alt="...">
+            
               <div class="content">
-                <h3>CONVENIENCE STORE</h3>
-                <p>7-Eleven is your one-stop shop for student essentials like snacks, beverages, personal care products and other necessities.</p>
+                <h3><?php echo $r['catname']?></h3>
+                <p><?php echo $r['catdescription']?></p>
               </div>
             </div>
 
-            <div class="container">
-              <img src="images/imFastFood.png" alt="Fast Food">
-              <button class="button">Explore</button>
-              <div class="content">
-                <h3>FAST FOOD</h3>
-                <p>Pizza Hut&apos;s delicious meals, McDonald&apos;s timeless favorites, and Burger King&apos;s flame-grilled delights offer students an enticing variety of affordable options designed to satisfy their taste buds.</p>
-              </div>
-            </div>
+          </section> 
+        
+    <?php }?>       
 
-            <div class="container">
-              <img src="images/imCoffee.png" alt="Coffee">
-              <button class="button">Explore</button>
-              <div class="content">
-                <h3>COFFEE</h3>
-                <p>La Coffee, dal.komm COFFEE, and Starbucks Coffee offer a range of energizing brews and treats, perfect for late-night study sessions or last-minute revisions.</p>
-              </div>
-            </div>
 
-            <div class="container">
-              <img src="images/imWestern.png" alt="Western">
-              <button class="button">Explore</button>
-              <div class="content">
-                <h3>WESTERN</h3>
-                <p>Saizeriya and Han&apos;s supply students with a tantalizing variety of affordable dishes from authentic Italian cuisine to diverse and Asian-inspired comfort food.</p>
-              </div>
-            </div>
-
-            <div class="container">
-              <img src="images/imBakery.png" alt="Bakery">
-              <button class="button">Explore</button>
-              <div class="content">
-                <h3>BAKERY</h3>
-                <p>Indulge your sweet tooth at Victoria Bakery & Cafe in Marina Square, where an enticing selection of freshly baked treats and confections awaits.</p>
-              </div>
-            </div>
-
-            <div class="container">
-              <img src="images/imFoodcourt.png" alt="Food Court">
-              <button class="button">Explore</button>
-              <div class="content">
-                <h3>FOOD COURT</h3>
-                <p>The convenience, affordability, and diverse meal options at Encik Tan and Gourmet Paradise @ The Dining Edition, make them favorite gathering spots for students.</p>
-              </div>
-            </div>
-          </section>
+          
           <footer class="footer">
 						<h2><b>UON SINGAPORE(PSB Academy)</b></h2>
 						<address>
@@ -121,8 +110,7 @@ $content = '<!DOCTYPE html>
     </div>
   </body>
 </html>
-';
-?>
+
 <!DOCTYPE html>
 <html>
 <head>
