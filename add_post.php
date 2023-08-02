@@ -69,15 +69,15 @@
                     <li>
                         <button class="dashboard-btn">Food Post</button>
                         <ul class="sub-menu">
-                            <li><button class="sub-btn" onclick="window.location.href='w_foodcats.php'">Food Category</button></li>
-                            <li><button class="sub-btn" onclick="window.location.href='addcat.php'">Add Category</button></li>
+                            <li><button class="sub-btn" onclick="window.location.href='dashboard_food.php'">Food Category</button></li>
+                            <li><button class="sub-btn" onclick="window.location.href='add_cat.php'">Add Category</button></li>
                         </ul>
                     </li>
                     <li>
                         <button class="dashboard-btn">Accommodate Post</button>
                         <ul class="sub-menu">
-                            <li><button class="sub-btn" onclick="window.location.href='w_accommodation.php'">Accommodation</button></li>
-                            <li><button class="sub-btn" onclick="window.location.href='addacc.php'">Add Accommodate</button></li>
+                            <li><button class="sub-btn" onclick="window.location.href='dashboard_acc.php'">Accommodation</button></li>
+                            <li><button class="sub-btn" onclick="window.location.href='add_acc.php'">Add Accommodate</button></li>
                         </ul>
                     </li>
                 </ul>
