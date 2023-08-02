@@ -54,7 +54,7 @@ $content = '<!DOCTYPE html>
 							<img src="images/pm_img.png" alt="pm_img">
 							<div class="team_info">
 								<h3>Soon Min Li</h3>
-								<p style="color:#979797">Bachelor of Information Technology</p>
+								<p style="color:#979797">University of Newcastle, Australia, Bachelor of Information Technology</p>
 								<p>Role: Project Manager</p>
 							</div>
 						</div>
@@ -63,7 +63,7 @@ $content = '<!DOCTYPE html>
 							<img src="images/dpm_img.png" alt="pm_img">
 							<div class="team_info">
 								<h3>Eva Lily Phillip</h3>
-								<p style="color:#979797">Bachelor of Information Technology</p>
+								<p style="color:#979797">University of Newcastle, Australia, Bachelor of Information Technology</p>
 								<p>Role: Deputy Project Manager</p>
 							</div>
 						</div>
@@ -72,7 +72,7 @@ $content = '<!DOCTYPE html>
 							<img src="images/uid_img.png" alt="pm_img">
 							<div class="team_info">
 								<h3>Victoria Tan</h3>
-								<p style="color:#979797">Bachelor of Information Technology</p>
+								<p style="color:#979797">University of Newcastle, Australia, Bachelor of Information Technology</p>
 							  	<p>Role: UI Designer </p>
 							</div>
 						</div>
@@ -82,7 +82,7 @@ $content = '<!DOCTYPE html>
 							<img src="images/c_img.png" alt="pm_img">
 							<div class="team_info">
 								<h3>Jordan Kho Shau Kai</h3>
-								<p style="color:#979797">Bachelor of Information Technology</p>
+								<p style="color:#979797">University of Newcastle, Australia, Bachelor of Information Technology</p>
 							  	<p>Role: Coder</p>
 							</div>
 						</div>
@@ -91,7 +91,7 @@ $content = '<!DOCTYPE html>
 							<img src="images/r_img.png" alt="pm_img">
 							<div class="team_info">
 								<h3>Srivengadan Sellathurai</h3>
-								<p style="color:#979797"> Bachelor of Information Technology</p>
+								<p style="color:#979797">University of Newcastle, Australia, Bachelor of Information Technology</p>
 							  	<p>Role: Researcher</p>
 							</div>
 						</div>
@@ -145,6 +145,7 @@ $content = '<!DOCTYPE html>
 		</div>
 	</body>
 </html>
+
 
 ';
 ?>
