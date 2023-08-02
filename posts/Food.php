@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php
+$title = 'Food';
+$content = '<!DOCTYPE html>
 <html lang="en">
   <head>
 		<meta charset="UTF-8">
@@ -111,6 +113,15 @@
   </body>
 </html>
 
+<!DOCTYPE html>
+<html>
+<head>
+<title><?php echo $title; ?></title>
+</head>
+<body><?php echo $content; ?></body>
+</html>
+';
+?>
 <!DOCTYPE html>
 <html>
 <head>
